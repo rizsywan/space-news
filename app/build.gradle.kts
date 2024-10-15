@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hiltAndroid)
+    id("kotlin-parcelize")
 }
 
 android {
@@ -40,9 +43,24 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.androidx.activity)
+    implementation(libs.androidx.activity.ktx)
+    implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.recyclerview)
+    implementation(libs.material)
+    implementation(libs.glide)
+    implementation(libs.room.runtime)
+    ksp(libs.room.compiler)
+    implementation(libs.androidx.room.ktx)
+    androidTestImplementation(libs.room.testing)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
 }
