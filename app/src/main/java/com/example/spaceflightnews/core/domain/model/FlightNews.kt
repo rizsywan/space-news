@@ -10,4 +10,5 @@ data class FlightNews(
     val imageUrl: String,
     val summary: String,
     val publishedAt: String,
+    val isFavorite: Boolean,
 ): Parcelable

@@ -1,5 +1,6 @@
 package com.example.spaceflightnews.core.di
 
+import com.example.spaceflightnews.core.data.FlightNewsRepository
 import com.example.spaceflightnews.core.domain.repository.IFlightNewsRepository
 import dagger.Binds
 import dagger.Module
@@ -10,6 +11,6 @@ import dagger.hilt.components.SingletonComponent
 @InstallIn(SingletonComponent::class)
 abstract class RepositoryModule {
 
-    //@Binds
-    //abstract fun provideRepository(repository: flightNewsRepository): IFlightNewsRepository
+    @Binds
+    abstract fun provideRepository(repository: FlightNewsRepository): IFlightNewsRepository
 }

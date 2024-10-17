@@ -16,4 +16,8 @@ class LocalDataSource @Inject constructor(private val flightNewsDao: FlightNewsD
         flightNews.isFavorite = newsState
         flightNewsDao.updateFavoriteFlightNews(flightNews)
     }
+
+    suspend fun insertFlightNews(flightNewsList: List<FlightNewsEntity>) {
+        flightNewsDao.insertFlightNews(flightNewsList)
+    }
 }
